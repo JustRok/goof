@@ -88,7 +88,7 @@ var se_arrow_ding = new Howl({
 	onload: reg_sound(111),
 	src: "audio/se/000029aa.wav",
 	loop: false,
-	volume: 0.7,
+	volume: 0.3,
 });
 
 var se_damage = new Howl({
