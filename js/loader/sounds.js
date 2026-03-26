@@ -46,7 +46,7 @@ var bgm_undyne1 = new Howl({
 
 var bgm_undyne2 = new Howl({
 	onload: reg_sound(12),
-	src: ["audio/bgm/mus_x_undyne.ogg", "audio/bgm/mus_x_undyne.mp3"],
+	src: ["audio/bgm/mus_x_pulse_of_a_soulless_heart.ogg", "audio/bgm/mus_x_pulse_of_a_soulless_heart.mp3"],
 	loop: true,
 	volume: 0.7,
 });
