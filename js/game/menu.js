@@ -117,11 +117,11 @@ Menu.prototype.updateLove = function() {
 			break;
 		case 1:
 			love_text.text = "LV 10";
-			heart.setMaxHP(4);
+			heart.setMaxHP(11);
 			break;
 		case 2:
 			love_text.text = "LV 99";
-			heart.setMaxHP(4);
+			heart.setMaxHP(20);
 			break;
 	}
 }
