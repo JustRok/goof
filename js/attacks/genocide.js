@@ -1,7 +1,7 @@
 var g_ag1 = {
 	type: "arrow",
 	id: "g_ag1",
-	next_time: 4.8,
+	next_time: 50.8,
 	arrows: [
 		{ direction: "$3", turntype: 0, target_time: 46.0, speed: 40 },
 		{ direction: "$3", turntype: 0, target_time: 47.6, speed: 40 },
