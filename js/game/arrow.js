@@ -64,10 +64,10 @@ Arrow.prototype.update = function (delta_ms) {
 			heart.takeDamage(5);
 		this.removed = true;
 		case "hard":
-			heart.takeDamage(5.09090909091);
+			heart.takeDamage(8);
 		this.removed = true;
 		case "genocide":
-			heart.takeDamage(28.5428571429);
+			heart.takeDamage(27);
 		this.removed = true;
 		case "aprilfools":
 		heart.takeDamage(1);
