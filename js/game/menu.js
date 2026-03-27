@@ -113,15 +113,15 @@ Menu.prototype.updateLove = function() {
 	switch (this.current_option) {
 		case 0:
 			love_text.text = "LV 1";
-			heart.setMaxHP(4);
+			heart.setMaxHP(20);  //can take 4 hits
 			break;
 		case 1:
 			love_text.text = "LV 10";
-			heart.setMaxHP(11);
+			heart.setMaxHP(56);  //can take 11 hits
 			break;
 		case 2:
 			love_text.text = "LV 99";
-			heart.setMaxHP(30);
+			heart.setMaxHP(999);  //can take 35 hits //999 because funi, but actually would be 412 or 652 HP because your HP at lvl 20 is 99 but OG calcualtion is different
 			break;
 	}
 }

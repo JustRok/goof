@@ -54,8 +54,20 @@ Pike.prototype.update = function(delta_ms) {
 	this.sprite.position.set(this.pos_x, this.pos_y);
 
 	if (this.collidesWithHeart()) {
+		switch (difficulty) {
+		case "normal":
+			heart.takeDamage(5);
+		this.removed = true;
+		case "hard":
+			heart.takeDamage(5.09090909091);
+		this.removed = true;
+		case "genocide":
+			heart.takeDamage(28.5428571429);
+		this.removed = true;
+		case "aprilfools":
 		heart.takeDamage(1);
 		this.removed = true;
+	}
 	}
 
 	if (this.active_time > spear_total_time) this.removed = true;
