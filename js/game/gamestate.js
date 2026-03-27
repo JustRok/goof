@@ -133,8 +133,8 @@ GameState.prototype.restartGame = function(difficulty) {
 			break;
 		case "genocide":
 			// genocide is timed to the music.
-			attack_queue_time = 6.4;
-			attack_queue = [ { type: "null", time: 6.4 } ];
+			attack_queue_time = 46.4;
+			attack_queue = [ { type: "null", time: 46.4 } ];
 			addNextAttack(g_ag1);
 			break;
 		case "aprilfools":
