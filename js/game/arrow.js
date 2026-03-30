@@ -52,7 +52,7 @@ function Arrow (props) {
 	gameplay_stage.addChild(this.sprite);
 
 }
-{(normal) = this.difficulty
+{var difficulty = this.difficulty
 }
 Arrow.prototype.update = function (delta_ms) {
 

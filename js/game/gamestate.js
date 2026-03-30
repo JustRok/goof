@@ -70,7 +70,7 @@ GameState.prototype.handleInput = function(key) {
 }
 
 var i_want_out = false;
-
+ 
 GameState.prototype.restartGame = function(difficulty) {
 
 	var date = new Date();
