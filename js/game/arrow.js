@@ -57,22 +57,24 @@ Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
 
-	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) {
+	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) 
+		{
 		// arrow hit the heart
 		switch (difficulty) {
 		case "normal":
-			heart.takeDamage(1);
+			heart.takeDamage(5)
 		this.removed = true;
 		case "hard":
-			heart.takeDamage(8);
+			heart.takeDamage(8)
 		this.removed = true;
 		case "genocide":
-			heart.takeDamage(27);
+			heart.takeDamage(27)
 		this.removed = true;
 		case "aprilfools":
-		heart.takeDamage(1);
+		heart.takeDamage(1)
 		this.removed = true;
 	}
+
 	} else if (this.target_time <= 0) {
 		// arrow hit the shield
 		if (this.direction % 4 == (heart.shield_dir + 4 - turntype_rotation[this.turntype]) % 4) {
