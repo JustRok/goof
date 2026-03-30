@@ -53,32 +53,31 @@ function Arrow (props) {
 
 }
 
-
+let difficulty = normal
 Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
 
 	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) {
 		// arrow hit the heart
-		this.difficulty = normal
-		switch (this.difficulty) {
+		
+		switch (difficulty) {
 			
-		case "normal":
-			heart.takeDamage(1);
+		case 'normal':
+			heart.takeDamage(5);
 		this.removed = true;
 		break;
-		case "hard":
+		case 'hard':
 			heart.takeDamage(8);
 		this.removed = true;
 		break;
-		case "genocide":
+		case 'genocide':
 			heart.takeDamage(27);
 		this.removed = true;
 		break;
-		case "aprilfools":
+		default:
 		heart.takeDamage(1);
 		this.removed = true;
-		break;
 	}
 
 	} else if (this.target_time <= 0) {
