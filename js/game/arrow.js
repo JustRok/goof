@@ -52,15 +52,15 @@ function Arrow (props) {
 	gameplay_stage.addChild(this.sprite);
 
 }
-
+difficulty = this.difficulty
 Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
 
-	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) 
-		{
+	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) {
 		// arrow hit the heart
-		switch (difficulty) {
+		switch (this.difficulty) {
+			
 		case "normal":
 			heart.takeDamage(5)
 		this.removed = true;
