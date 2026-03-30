@@ -64,15 +64,15 @@ Arrow.prototype.update = function (delta_ms) {
 		
 		switch (difficulty) {
 			
-		case 'normal':
+		case "normal":
 			heart.takeDamage(5);
 		this.removed = true;
 		break;
-		case 'hard':
+		case "hard":
 			heart.takeDamage(8);
 		this.removed = true;
 		break;
-		case 'genocide':
+		case "genocide":
 			heart.takeDamage(27);
 		this.removed = true;
 		break;
