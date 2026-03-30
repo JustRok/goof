@@ -64,17 +64,21 @@ Arrow.prototype.update = function (delta_ms) {
 		switch (this.difficulty) {
 			
 		case "normal":
-			heart.takeDamage(5)
+			heart.takeDamage(5);
 		this.removed = true;
+		break;
 		case "hard":
-			heart.takeDamage(8)
+			heart.takeDamage(8);
 		this.removed = true;
+		break;
 		case "genocide":
-			heart.takeDamage(27)
+			heart.takeDamage(27);
 		this.removed = true;
+		break;
 		case "aprilfools":
-		heart.takeDamage(1)
+		heart.takeDamage(1);
 		this.removed = true;
+		break;
 	}
 
 	} else if (this.target_time <= 0) {
