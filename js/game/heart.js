@@ -174,7 +174,7 @@ Heart.prototype.takeDamage = function(damage) {
 	this.invincibility = this.invincibility_increment;
 
 	se_damage.play();
-	this.hp = (0, this.hp - damage);
+	this.hp = this.maxhp(0, this.hp - damage);
 	if (this.hp == 0) {
 		gamestate.endGame();
 	}
