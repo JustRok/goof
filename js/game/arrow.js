@@ -52,7 +52,8 @@ function Arrow (props) {
 	gameplay_stage.addChild(this.sprite);
 
 }
-difficulty = this.difficulty
+normal = this.difficulty
+
 Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
