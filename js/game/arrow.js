@@ -53,7 +53,8 @@ function Arrow (props) {
 
 }
 
-let difficulty = normal
+import { difficulty } from "restartGame";
+
 Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
