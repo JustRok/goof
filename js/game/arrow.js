@@ -53,7 +53,7 @@ function Arrow (props) {
 
 }
 
-import { difficulty } from "restartGame"
+import { difficulty } from "./restartGame"
 
 Arrow.prototype.update = function (delta_ms) {
 
@@ -75,7 +75,7 @@ Arrow.prototype.update = function (delta_ms) {
     default:
         heart.takeDamage(1);
 		this.removed = true;
-} 
+	}
 else if (this.target_time <= 0) {
 		// arrow hit the shield
 		if (this.direction % 4 == (heart.shield_dir + 4 - turntype_rotation[this.turntype]) % 4) {
