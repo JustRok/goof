@@ -119,7 +119,7 @@ function addNextAttack (attack) {
 		new_attack = attack;
 	} else {
 		attack_queue_time += next_attack.next_time;
-		var new_attack = attacks[next_attack.next_sets[Math.floor(next_attack.next_sets.length * Math.random())]];
+        new_attack = attacks[next_attack.next_sets[Math.floor(next_attack.next_sets.length * Math.random())]];
 	}
 
 	switch (new_attack.type) {
