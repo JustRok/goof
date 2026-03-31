@@ -53,7 +53,7 @@ function Arrow (props) {
 
 }
 
-import { difficulty } from "restartGame";
+import { difficulty } from "./gamestate";
 
 Arrow.prototype.update = function (delta_ms) {
 
@@ -180,5 +180,3 @@ function addArrowGroup (arrow_group) {
 	}
 
 }
-
-import { difficulty } from "./gamestate";
