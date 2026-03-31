@@ -59,38 +59,27 @@ Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
 
-	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) {
-		// arrow hit the heart
-		
-		switch (difficulty) {
-			
-		case "normal":
-			heart.takeDamage(5);
-		this.removed = true;
-		break;
-		case "hard":
-			heart.takeDamage(8);
-		this.removed = true;
-		break;
-		case "genocide":
-			heart.takeDamage(27);
-		this.removed = true;
-		break;
-		default:
-		heart.takeDamage(1);
-		this.removed = true;
-	}
-
-	} else if (this.target_time <= 0) {
+	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) switch (difficulty) {
+    case "normal":
+        heart.takeDamage(5);
+        break;
+    case "hard":
+        heart.takeDamage(8);
+        break;
+    case "genocide":
+        heart.takeDamage(27);
+        break;
+    default:
+        heart.takeDamage(1);
+} 
+else if (this.target_time <= 0) {
 		// arrow hit the shield
 		if (this.direction % 4 == (heart.shield_dir + 4 - turntype_rotation[this.turntype]) % 4) {
 			se_arrow_ding.play();
-			this.removed = true;
 		}
 	}
-
 	this.updatePosition();
-
+	this.removed = true;
 }
 
 
@@ -191,3 +180,5 @@ function addArrowGroup (arrow_group) {
 	}
 
 }
+
+import { difficulty } from "./gamestate";

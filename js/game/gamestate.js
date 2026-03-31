@@ -409,3 +409,4 @@ GameState.prototype.update = function(delta_ms) {
 
 
 var gamestate;
+var difficulty=this.difficulty
