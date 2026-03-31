@@ -18,7 +18,7 @@ Scene.prototype.selectScene = function(name, data) {
 
 	this.scene_state = name;
 	this.scene_time = 0;
-
+    heart.setPosition(320, 240);
 	switch(this.scene_state) {
 		case "splash":
 			break;
@@ -30,7 +30,6 @@ Scene.prototype.selectScene = function(name, data) {
 			gameplay_stage.alpha = 0;
 			break;
 	}
-
 }
 
 Scene.prototype.update = function(delta_ms) {

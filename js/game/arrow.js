@@ -53,13 +53,11 @@ function Arrow (props) {
 
 }
 
-import { difficulty } from "./restartGame"
-
 Arrow.prototype.update = function (delta_ms) {
 
 	this.target_time -= delta_ms;
 
-	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) switch (difficulty) {
+	if (this.target_time * this.speed < -SHIELD_DISTANCE + 8) switch (gamestate.difficulty) {
     case "normal":
         heart.takeDamage(5);
 		this.removed = true;
