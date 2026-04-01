@@ -53,18 +53,21 @@ Spear.prototype.update = function(delta_ms) {
 	this.sprite.position.set(this.pos_x, this.pos_y);
 
 	if (this.collidesWithHeart()) {
-		switch (difficulty) {
-		case "normal":
-			heart.takeDamage(5);
+		switch (gamestate.difficulty) {
+    case "normal":
+        heart.takeDamage(5);
 		this.removed = true;
-		case "hard":
-			heart.takeDamage(8);
+        break;
+    case "hard":
+        heart.takeDamage(8);
 		this.removed = true;
-		case "genocide":
-			heart.takeDamage(27);
+        break;
+    case "genocide":
+        heart.takeDamage(27);
 		this.removed = true;
-		case "aprilfools":
-		heart.takeDamage(1);
+        break;
+    default:
+        heart.takeDamage(1);
 		this.removed = true;
 	}
 	}

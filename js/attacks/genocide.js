@@ -3,7 +3,7 @@ var g_ag1 = {
 	id: "g_ag1",
 	next_time: 4.8,
 	arrows: [
-		{ direction: "$3", turntype: 0, target_time: 0.0, speed: 40 },
+		{ direction: "$3", turntype: 0, target_time: 0.2, speed: 40 },
 		{ direction: "$3", turntype: 0, target_time: 1.6, speed: 40 },
 		{ direction: "$3", turntype: 0, target_time: 3.2, speed: 40 },
 
@@ -30,8 +30,8 @@ var g_ag1 = {
 
 var g_sp1 = {
 	type: "spear",
-	next_time: 1.6,
-	buffer_time: 0.3,
+	next_time: 4.6,
+	buffer_time: 0.2,
 	spear_interval: 300,
 	next_sets: ["g_ag2"],
 };

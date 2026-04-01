@@ -74,8 +74,8 @@ var i_want_out = false;
 GameState.prototype.restartGame = function(difficulty) {
 
 	var date = new Date();
-
-	if ((april_fools || date.getMonth() == 3 && date.getDate() == 1) && !i_want_out) {
+//april fools is the third month and first day, change if you dont want april fools but put back after
+	if ((april_fools || date.getMonth() == 3 && date.getDate() == 2) && !i_want_out) {
 		if (april_fools == false) {
 			heart.setMaxHP(99);
 		} else {
@@ -115,6 +115,7 @@ GameState.prototype.restartGame = function(difficulty) {
 		case "hard":
 			heart.invincibility_increment = 500; break;
 		case "genocide":
+			heart.invincibility_increment = 100; break;
 		case "aprilfools":
 			heart.invincibility_increment = 100; break;
 	}
