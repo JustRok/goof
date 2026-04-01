@@ -155,6 +155,7 @@ GameState.prototype.restartGame = function(difficulty) {
 
 	switch (difficulty) {
 		case "normal":
+			bgm_undyne_easy.play(); break;
 		case "hard":
 			bgm_undyne1.play(); break;
 		case "genocide":
@@ -193,6 +194,7 @@ GameState.prototype.endGame = function() {
 
 	switch (this.difficulty) {
 		case "normal":
+			bgm_undyne_easy.stop(); break;
 		case "hard":
 			bgm_undyne1.stop(); break;
 		case "genocide":
