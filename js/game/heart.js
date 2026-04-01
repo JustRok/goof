@@ -190,7 +190,7 @@ Heart.prototype.render = function() {
 	this.graphics.clear();
 	this.graphics.beginFill(0xff0000);
 	this.graphics.lineStyle(0, 0xFFFFFF);
-	this.graphics.drawRect(262, 447, 28, 21);
+	this.graphics.drawRect(142, 447, 28, 21);
 	this.graphics.beginFill(0xffff00);
 	this.graphics.drawRect(262, 447, this.hp * 28 / this.maxhp, 21);
 	this.graphics.endFill();
