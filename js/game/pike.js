@@ -64,7 +64,7 @@ Pike.prototype.update = function(delta_ms) {
 		this.removed = true;
         break;
     case "genocide":
-        heart.takeDamage(27);
+        heart.takeDamage(99.99);
 		this.removed = true;
         break;
     default:
