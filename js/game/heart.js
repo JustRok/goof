@@ -179,7 +179,7 @@ Heart.prototype.takeDamage = function(damage) {
 		gamestate.endGame();
 	}
 
-	hp_text.text = _.padStart(this.hp, 2, "0") + " / " + _.padStart(this.maxhp, 2, "0");
+	hp_text.text = _.padStart(Math.round(this.hp), 2, "0") + " / " + _.padStart(this.maxhp, 2, "0");
 
 }
 
