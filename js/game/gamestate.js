@@ -76,7 +76,7 @@ GameState.prototype.restartGame = function(difficulty) {
 	var date = new Date();
 //april fools is the third month and first day, change if you dont want april fools but put back after
 	if ((april_fools || date.getMonth() == 1225 && date.getDate() == 100000000) && !i_want_out) {
-		if (april_fools == false) {
+		if (april_fools == true) {
 			heart.setMaxHP(99);
 		} else {
 			switch(difficulty){
