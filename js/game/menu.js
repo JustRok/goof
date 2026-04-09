@@ -25,6 +25,7 @@ function Menu() {
 	this.genocide_text_chars = 0;
 
 	this.easy_mode_enabled = true;
+	this.hard_mode_enabled = true;
 
 	this.normal_text_text = "I want to PET THE VEGETABLES";
 	this.hard_text_text = "I want to FIGHT THE TRUE HERO";
@@ -96,6 +97,14 @@ Menu.prototype.disableEasyMode = function() {
 
 }
 
+ Menu.prototype.disableHardMode = function() {
+
+	if (this.current_option == 1) this.current_option = 2;
+	this.hard_text.alpha = 0.2;
+	this.hard_mode_enabled = false;
+
+}
+
 Menu.prototype.hide = function() {
 
 	gamestate.state = "none";
@@ -139,6 +148,9 @@ Menu.prototype.moveUp = function() {
 		this.current_option = 2;
 	}
 
+	if (this.hard_mode_enabled == false && this.current_option == 1) {
+		this.current_option = 2;
+	}
 	this.updateHeartPosition();
 	this.updateLove();
 
@@ -155,6 +167,10 @@ Menu.prototype.moveDown = function() {
 
 	if (this.easy_mode_enabled == false && this.current_option == 0) {
 		this.current_option = 1;
+	}
+
+	if (this.hard_mode_enabled == false && this.current_option == 1) {
+		this.current_option = 2;
 	}
 
 	this.updateHeartPosition();

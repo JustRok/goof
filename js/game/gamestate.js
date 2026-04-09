@@ -189,7 +189,7 @@ GameState.prototype.endGame = function() {
 	heart.shield_sprite.visible = false;
 	undyne.opacity_g.alpha = 0;
 	this.state = "gameover";
-
+    heart.hp = heart.maxhp;
 	menu.select_text.text = "Play again?"
 
 	switch (this.difficulty) {
@@ -307,6 +307,10 @@ GameState.prototype.update = function(delta_ms) {
 	if (this.state == "playing") {
 		this.elapsed_time += delta_ms;
 		time_text.text = format_time_long(this.elapsed_time);
+
+		// parry.update(delta_ms)
+		// only grey cuz in progress and need 2 update alr stuff below shouldnt be
+		//	parry.update(delta_ms / 1000)
 
 		// arrows.update(delta_ms)
 		for (var a = 0; a < arrows.length; ++a) {
