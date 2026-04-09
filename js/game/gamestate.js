@@ -276,6 +276,7 @@ function endGameText(diff, surv_time) {
 					{ text: "Keep trying, human!\nReach for the top!" },
 				];
 			else
+				menu.disableHardMode();
 				return [
 					{ text: "You're doing well." },
 					{ text: "But you can still\ndo better! Let me\ngo harder on you!" },
