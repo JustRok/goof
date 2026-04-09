@@ -144,13 +144,14 @@ Menu.prototype.moveUp = function() {
 		this.current_option += this.options.length;
 	}
 
+	if (this.hard_mode_enabled == false && this.current_option == 1) {
+		this.current_option = 0;
+	}
+
 	if (this.easy_mode_enabled == false && this.current_option == 0) {
 		this.current_option = 2;
 	}
 
-	if (this.hard_mode_enabled == false && this.current_option == 1) {
-		this.current_option = 2;
-	}
 	this.updateHeartPosition();
 	this.updateLove();
 
