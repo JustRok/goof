@@ -3,9 +3,9 @@ var ag1 = {
 	id: "ag1",
 	next_time: 3.2,
 	arrows: [
-		{ direction: "$3", turntype: 0, target_time: 0.0, speed: 100 },
-		{ direction: "$3", turntype: 0, target_time: 0.6, speed: 100 },
-		{ direction: "$3", turntype: 0, target_time: 1.2, speed: 100 },
+		{ direction: "3", turntype: 0, target_time: 0.0, speed: 100 },
+		{ direction: "3", turntype: 0, target_time: 0.6, speed: 100 },
+		{ direction: "3", turntype: 0, target_time: 1.2, speed: 100 },
 	],
 	next_sets: ["ag2"],
 };
@@ -16,12 +16,12 @@ var ag2 = {
 	id: "ag2",
 	next_time: 4.5,
 	arrows: [
-		{ direction: "$3", turntype: 0, target_time: 0.0, speed: 150 },
-		{ direction: "$3", turntype: 0, target_time: 0.5, speed: 150 },
-		{ direction: "$2", turntype: 0, target_time: 1.0, speed: 150 },
-		{ direction: "$2", turntype: 0, target_time: 1.5, speed: 150 },
-		{ direction: "$4", turntype: 0, target_time: 2.0, speed: 150 },
-		{ direction: "$4", turntype: 0, target_time: 2.5, speed: 150 },
+		{ direction: "3", turntype: 0, target_time: 0.0, speed: 150 },
+		{ direction: "3", turntype: 0, target_time: 0.5, speed: 150 },
+		{ direction: "2", turntype: 0, target_time: 1.0, speed: 150 },
+		{ direction: "2", turntype: 0, target_time: 1.5, speed: 150 },
+		{ direction: "4", turntype: 0, target_time: 2.0, speed: 150 },
+		{ direction: "4", turntype: 0, target_time: 2.5, speed: 150 },
 	],
 	next_sets: ["ag3"],
 };
