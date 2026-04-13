@@ -19,13 +19,18 @@ var swarm_initial_angle = 0;
 
 function switchAttackMode() {
 
-	if (!attack_queue || attack_queue.length < 2) {
-		console.error("Error: attack_queue is too short!");
+	if (!attack_queue || attack_queue.length === 0) {
+		console.error("Error: attack_queue is empty!");
 		return;
 	}
 
 	var borrowed_time = attack_queue[0].time;
 	attack_queue.shift();
+
+	if (attack_queue.length === 0) {
+		console.error("Error: attack_queue became empty after shift!");
+		return;
+	}
 
 	var current_attack = attack_queue[0];
 	current_attack.time += borrowed_time;
