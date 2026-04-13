@@ -19,6 +19,11 @@ var swarm_initial_angle = 0;
 
 function switchAttackMode() {
 
+	if (!attack_queue || attack_queue.length < 2) {
+		console.error("Error: attack_queue is too short!");
+		return;
+	}
+
 	var borrowed_time = attack_queue[0].time;
 	attack_queue.shift();
 

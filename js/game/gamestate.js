@@ -390,9 +390,9 @@ GameState.prototype.update = function(delta_ms) {
 		}
 
 		if (current_attack.time <= 0.4 + (current_attack.buffer_time || 0) &&
-	attack_queue.length > 1 &&  
-	current_attack.type != attack_queue[1].type)
-		undyne.swing_arm();
+			attack_queue.length > 1 &&  
+			current_attack.type != attack_queue[1].type)
+			undyne.swing_arm();
 
 		if (current_attack.time <= (current_attack.buffer_time || 0))
 				switchAttackMode();
