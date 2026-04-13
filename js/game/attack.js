@@ -19,17 +19,15 @@ var swarm_initial_angle = 0;
 
 function switchAttackMode() {
 
-	if (!attack_queue || attack_queue.length === 0) {
-		console.error("Error: attack_queue is empty!");
-		return;
-	}
+	if (!attack_queue || attack_queue.length === 0) return;
 
 	var borrowed_time = attack_queue[0].time;
 	attack_queue.shift();
 
 	if (attack_queue.length === 0) {
-		console.error("Error: attack_queue became empty after shift!");
-		return;
+		// No more attacks queued, need to add one
+		addNextAttack();
+		if (attack_queue.length === 0) return;  // Safety check
 	}
 
 	var current_attack = attack_queue[0];
