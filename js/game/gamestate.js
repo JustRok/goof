@@ -275,12 +275,13 @@ function endGameText(diff, surv_time) {
 					{ text: "Good, but still\nnot good enough." },
 					{ text: "Keep trying, human!\nReach for the top!" },
 				];
-			else
+			else {
 				menu.disableHardMode();
 				return [
 					{ text: "You're doing well." },
 					{ text: "But you can still\ndo better! Let me\ngo harder on you!" },
 				];
+			}
 		case "genocide":
 			return [
 				{ text: "You're going to have\nto try a little\nharder than THAT." },
