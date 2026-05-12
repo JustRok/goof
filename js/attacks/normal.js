@@ -242,7 +242,7 @@ var ag11 = {
 
 var ag12 = {
 	type: "arrow",
-	id: "ag11",
+	id: "ag12",
 	next_time: 4.4,
 	arrows: [
 		{ direction: "2", turntype: 0, target_time: 0.0, speed: 200 },
