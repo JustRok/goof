@@ -81,7 +81,7 @@ GameState.prototype.restartGame = function(difficulty) {
 		} else {
 			switch(difficulty){
 				case "normal":
-					heart.setMaxHP(99); break;
+					heart.setMaxHP(4); break;
 				case "hard":
 					i_want_out = true;
 					difficulty = "genocide";
