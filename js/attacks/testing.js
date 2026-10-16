@@ -1,4 +1,4 @@
-var ag1 = {
+var test1 = {
 	type: "arrow",
 	id: "ag1",
 	next_time: 3.2,
@@ -10,7 +10,7 @@ var ag1 = {
 	next_sets: ["p1"],
 };
 
-var p1 = {
+var test2 = {
 	type: "parry",
 	wait_time: 0.5,
 	parry_window_start: 0.3,
